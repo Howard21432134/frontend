@@ -1,6 +1,6 @@
 workspace:
   base: /test
-  path: src/github.com/CJTSAJ/drone
+  path: src/github.com/Howard21432134/frontend
 pipeline:
   build:
     image: node:latest
@@ -10,7 +10,7 @@ pipeline:
       - npm run build
   publish:
     image: plugins/docker
-    repo: cjtsaj/drone
+    repo: Howard21432134/frontend
     tags: ["latest", "v2"]
     secrets: [ docker_username, docker_password ]
     dockerfile: Dockerfile
