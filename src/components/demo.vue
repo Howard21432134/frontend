@@ -19,7 +19,7 @@ export default {
   methods:{
     test:function(){
     console.log("dsa")
-      $.get("http://129.211.110.103:8075"+"/test2",(response)=>{
+      $.get("http://111.231.132.87:8075"+"/test2",(response)=>{
         console.log("asd")
         this.msg=response
       })
