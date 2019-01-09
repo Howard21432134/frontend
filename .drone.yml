@@ -1,0 +1,16 @@
+workspace:
+  base: /test
+  path: src/github.com/CJTSAJ/drone
+pipeline:
+  build:
+    image: node:latest
+    commands:
+      - npm install npm@latest -g
+      - npm install
+      - npm run build
+  publish:
+    image: plugins/docker
+    repo: cjtsaj/drone
+    tags: ["latest", "v2"]
+    secrets: [ docker_username, docker_password ]
+    dockerfile: Dockerfile
