@@ -10,7 +10,7 @@ pipeline:
       - npm run build
   publish:
     image: plugins/docker
-    repo: Howard21432134/frontend
+    repo: 978118325/frontend
     tags: ["latest", "v2"]
     secrets: [ docker_username, docker_password ]
     dockerfile: Dockerfile
